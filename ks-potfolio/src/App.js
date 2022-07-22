@@ -9,7 +9,7 @@ import NavB from './components/nav';
 
 function App() {
   return (
-    <div>
+    <div className="app-back-color">
       <header>
         <NavB></NavB>
       </header>
