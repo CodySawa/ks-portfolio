@@ -4,7 +4,7 @@ import './App.css';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import NavB from './components/nav';
+import NavB from './components/Navbar/nav';
 
 
 function App() {

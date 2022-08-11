@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap'
+import resume from '../../resume.pdf'
 
 function NavB() {
     return (
@@ -10,7 +11,7 @@ function NavB() {
                     <Nav.Link className="navlink" href="#about">About</Nav.Link>
                     <Nav.Link className="navlink" href="#projects">Projects</Nav.Link>
                     <Nav.Link className="navlink" href="#contact">Contact</Nav.Link>
-                    <Button href='https://google.com' target='_blank' class="btn btn-primary-outline">Resume</Button>
+                    <Button href="" target='_blank' class="btn btn-primary-outline">Resume</Button>
                 </Nav>
             </Container>
         </Navbar>
