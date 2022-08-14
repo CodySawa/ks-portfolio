@@ -19,7 +19,7 @@ code {
 }
 
 main {
-  padding: 4vw;
+  /* padding: 4vw; */
   color: white;
 }
 
@@ -40,8 +40,13 @@ Nav {
   font-family: 'Inconsolata', monospace;
 }
 
-.opacity90 {
-  opacity: 0.98;
+.navOpacity {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+  background-color: rgba(33, 37, 41, 0.98);
+}
+
+.star {
+  height: 750px;
+  background-color: black;
 }
 
