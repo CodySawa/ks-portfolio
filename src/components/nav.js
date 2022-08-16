@@ -1,22 +1,36 @@
 import React, {useState} from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap'
-import resume from '../../resume.pdf'
+import resume from '../resume.pdf'
 
 function NavB() {
-    const [navbar, setNavbar] = useState(false);
+    const [navOpacity, setNavOpacity] = useState(false);
+    const [navColor, setNavColor] = useState(false);
 
-    const changeBackground = () => {
-        if(window.scrollY >= 750) {
-            setNavbar(true);
+    const changeNavOpacity = () => {
+        if(window.scrollY >= window.innerHeight - 85) {
+            setNavOpacity(true);
         } else {
-            setNavbar(false);
+            setNavOpacity(false);
         }
     }
 
-    window.addEventListener('scroll', changeBackground);
+    let navO = navOpacity ? 'navOpac' : '';
+
+    const changeNavColor = () => {
+        if(window.scrollY >= window.innerHeight) {
+            setNavColor(true);
+        } else {
+            setNavColor(false);
+        }
+    }
+
+    let navC = navColor ? 'navColor' : '';
+
+    window.addEventListener('scroll', changeNavOpacity);
+    window.addEventListener('scroll', changeNavColor);
 
     return (
-        <Navbar variant="dark" fixed="top" className={navbar ? 'navOpacity' : ''}>
+        <Navbar variant="dark" fixed="top" className={` ${navO} ${navC} `}>
             <Container >
                 <Navbar.Brand id="brand" href="#home"><span>&lt;</span><span style={{ color: '#0d6efd' }}>k</span><span>&gt;</span></Navbar.Brand>
                 <Nav className="ms-auto" >
