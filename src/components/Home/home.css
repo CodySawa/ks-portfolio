@@ -1,73 +1,125 @@
+:root {
+  --color-primary: #f5ffff;
+  --color-secondary: #58cced;
+  --color-tertiary: #3895d3;
+  --color-quaternary: #1261a0;
+  --color-quinary: #072f5f;
+}
+
 #home {
     height: 100vh;
     background-color: black;
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+.homeSmallText {
+  font-size: ;
+}
+  
+.homeTextDiv {
+    text-align: center;
+    font-family: var(--font-info);
+}
+
+.greeting {
+  font-size: clamp(15px, 2vw, 3vw);
+}
+
+.homeTextDiv h2 {
+    font-size: clamp(40px, 8vw, 9vw);
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+}
+
+.selfExp {
+    font-size: clamp(20px, 3vw, 4vw);
+}
+
+a, a:link, a:visited,  a:hover, a:active {
+  text-decoration: none !important;
+  color: white;
+}
+
+.downIcon {
+  height: clamp(30px, 3vw, 4vw);
+  animation: arrowBounce 1.2s infinite;
+  position: absolute;
+  bottom: 2%;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
   }
-  
-  .homeTextDiv {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
   }
-  
-  
-  .homeTextDiv h2 {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 8vw;
-    font-family: sans-serif;
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
   }
-  
-  .homeTextDiv p {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2vw;
-    font-family: sans-serif;
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 
-  .homeTextDiv h2:nth-child(1) {
-    color: transparent;
-    -webkit-text-stroke: 2px #0d6efd;
+}
+@keyframes arrowBounce {
+  0% {
+    transform: translate(0px, 0px);
   }
-  
-  .homeTextDiv h2:nth-child(2) {
-    color: #0d6efd;
-    animation: animate 4s ease-in-out infinite;
+  75% {
+    transform: translate(0px, -12px);
   }
-
-  @keyframes animate {
-    0%,
-    100% {
-      clip-path: polygon(
-        0% 45%,
-        16% 44%,
-        33% 50%,
-        54% 60%,
-        70% 61%,
-        84% 59%,
-        100% 52%,
-        100% 100%,
-        0% 100%
-      );
-    }
-  
-    50% {
-      clip-path: polygon(
-        0% 60%,
-        15% 65%,
-        34% 66%,
-        51% 62%,
-        67% 50%,
-        84% 45%,
-        100% 46%,
-        100% 100%,
-        0% 100%
-      );
-    }
+  100% {
+    transform: translate(0px, 0px);
   }
+}

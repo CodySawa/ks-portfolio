@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Inconsolata&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 :root {
-  --font-info: 'Calibre', 'Inter', 'San Francisco';
+  --font-info: 'Poppins', sans-serif;
+  
 }
 
 body {
